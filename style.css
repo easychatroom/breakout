@@ -1,72 +1,82 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #000;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+/* Base: hide everything by default */
+body, .game-container, canvas, #leaderboard {
+  display: none;
 }
 
-.game-container {
-  text-align: center;
-  position: relative;
-}
+/* ✅ Only show layout on screens wider than 768px and landscape */
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-h1 {
-  margin: 0;
-  font-size: 36px;
-  color: #fff;
-}
+  .game-container {
+    display: block;
+    text-align: center;
+    position: relative;
+  }
 
-canvas {
-  display: block;
-  margin: 20px auto;
-  background: #111;
-  border: 2px solid #fff;
-}
+  h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+  }
 
-.instructions {
-  font-size: 14px;
-  margin-top: 10px;
-  color: #aaa;
-}
+  canvas {
+    display: block;
+    margin: 20px auto;
+    background: #111;
+    border: 2px solid #fff;
+  }
 
-/* Leaderboard Styling */
-#leaderboard {
-  position: absolute;
-  right: -260px;
-  top: 40px;
-  width: 240px;
-  background: #111;
-  padding: 15px;
-  border-radius: 10px;
-  color: white;
-  font-family: sans-serif;
-  max-height: 450px;
-  overflow-y: auto;
-  border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
+  .instructions {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #aaa;
+  }
 
-#leaderboard h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
+  /* Leaderboard UI */
+  #leaderboard {
+    display: block;
+    position: absolute;
+    right: -260px;
+    top: 40px;
+    width: 240px;
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    max-height: 450px;
+    overflow-y: auto;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
 
-#leaderboardEntries .leaderboard-entry {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  #leaderboard h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 
-#leaderboardEntries img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  margin-right: 8px;
-  border: 1px solid #555;
+  #leaderboardEntries .leaderboard-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #leaderboardEntries img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 1px solid #555;
+  }
 }
