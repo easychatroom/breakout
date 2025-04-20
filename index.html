@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breakout+</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Breakout+</h1>
+    <canvas id="gameCanvas"></canvas>
+    <div class="instructions">
+      <p>Use <strong>Arrow Left</strong> and <strong>Arrow Right</strong> to move the paddle.</p>
+      <p>The game starts when you press a movement key!</p>
+    </div>
+    <div id="leaderboard">
+      <h2>🏆 Leaderboard</h2>
+      <div id="leaderboardEntries"></div>
+    </div>    
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="firebase.js"></script>
+  <script src="hash-auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
