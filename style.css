@@ -31,12 +31,15 @@ body, .game-container, canvas, #leaderboard {
   }
 
   canvas {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    aspect-ratio: 4 / 3;
     display: block;
     margin: 20px auto;
     background: #111;
     border: 2px solid #fff;
-  }
-
+  }  
   .instructions {
     font-size: 14px;
     margin-top: 10px;
